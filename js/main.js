@@ -9,17 +9,16 @@ let dog_names = ["Max","HAS","PuRple","dog"]
 function findWords(list,target){
     //Your code goes here
     for(let i=0; i<list.length; i++){
-        let lower=target.toLowerCase()
-        let current=list[i].toLowerCase
-        if (lower.search(current) != -1){
-            return `${list[i]} is a match `
+        console.log
+        if (target.search(list[i]) != -1){
+            console.log (`${list[i]} is a match `)
         } else {
-            return `${list[i]} has no match `
+            console.log (`${list[i]} has no match `)
         }
     }
 }
 
-console.log(findWords(dog_names,dog_string))
+findWords(dog_names,dog_string)
 
 //Call method here with parameters
 
@@ -31,7 +30,7 @@ and replaces it with the string "even index" */
 
 function replaceEvens(arr){
     for(let i=0;i<arr.length;i++){
-        if (i != 0 && i%2==0){
+        if (i == 0 && i%2==0){
             arr.splice(i,1,'even index')
         }else{
             continue
